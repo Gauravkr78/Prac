@@ -28,4 +28,4 @@ jobs:
       - name: Run Python Script
         run: |
           echo "Running Python script..."
-          python Prac/Practice.py
+          python New_Code/loops.py
