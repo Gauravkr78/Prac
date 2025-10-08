@@ -22,10 +22,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # install any requirements if exists
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run Python Script
+      - name: Run all Python scripts in New_Code folder
         run: |
-          echo "Running Python script..."
-          python New_Code/loops.py
+          echo "Running all Python scripts in New_Code..."
+          for file in New_Code/*.py; do
+            echo "Executing $file"
+            python "$file"
+          done
