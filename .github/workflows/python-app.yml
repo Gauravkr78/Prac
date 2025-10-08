@@ -26,6 +26,7 @@ jobs:
 
       - name: Run tests and generate Allure results
         run: |
+          export PYTHONPATH=.
           pytest tests --alluredir=allure-results
 
       - name: Upload Allure results
